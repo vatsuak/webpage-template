@@ -8,7 +8,7 @@
 		font-size:18px;
 		margin-left: auto;
 		margin-right: auto;
-		width: 1100px;
+		width: 1400px;
 	}
 	
 	h1 {
@@ -118,7 +118,7 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
+	<title>Failure Detection</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="Creative and Descriptive Paper Title." />
 	<meta property="og:description" content="Paper description." />
@@ -138,70 +138,46 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
-		<table align=center width=600px>
-			<table align=center width=600px>
+		<span style="font-size:36px">Discovering Closed-Loop Failures of Vision-Based Controllers via Reachability Analysis</span>
+		<br><br>
+		<table align=center width=800px>
+			<table align=center width=800px>
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:24px"><a href="https://vatsuak.github.io">Kaustav Chakraborty<sup>1</sup></a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
-						</center>
-					</td>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:24px"><a href="https://smlbansal.github.io">Somil Bansal<sup>1</sup></a></span>
 						</center>
 					</td>
 				</tr>
 			</table>
-			<table align=center width=250px>
-				<tr>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
-						</center>
-					</td>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
-						</center>
-					</td>
-				</tr>
-			</table>
+			<br>
+			<sup>1</sup> University of Southern California.
 		</table>
 	</center>
 
-	<center>
-		<table align=center width=850px>
-			<tr>
-				<td width=260px>
-					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
-					</center>
-				</td>
-			</tr>
-		</table>
-		<table align=center width=850px>
-			<tr>
-				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
-				</td>
-			</tr>
-		</table>
-	</center>
-
+	<br>
 	<hr>
 
-	<table align=center width=850px>
+	<table align=center width=800px>
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				<p>
+				Machine learning driven image-based controllers allow robotic systems to take intelligent actions based on the visual feedback from their environment. Understanding when these controllers might lead to system safety violations is important for their integration in safety-critical applications and engineering corrective safety measures for the system.
+				Existing methods leverage simulation-based testing (or falsification) to find the failures of vision-based controllers, i.e., the visual inputs that lead to closed-loop safety violations.
+				However, these techniques do not scale well to the scenarios involving high-dimensional and complex visual inputs, such as RGB images. 
+				In this work, we cast the problem of finding closed-loop vision failures as a Hamilton-Jacobi (HJ) reachability problem. 
+				Our approach blends simulation-based analysis with HJ reachability methods to compute an approximation of the backward reachable tube (BRT) of the system, i.e., the set of unsafe states for the system under vision-based controllers. 
+				Utilizing the BRT, we can tractably and systematically find the system states and corresponding visual inputs that lead to closed-loop failures.
+				These visual inputs can be subsequently analyzed to find the input characteristics that might have caused the failure.
+				Besides its scalability to high-dimensional visual inputs, an explicit computation of BRT allows the proposed approach to capture non-trivial system failures that are difficult to expose via random simulations.
+				We demonstrate our framework on two case studies involving an RGB image-based neural network controller for (a) autonomous indoor navigation, and (b) autonomous aircraft taxiing.
+				</p>
 			</td>
 		</tr>
 	</table>
@@ -261,17 +237,14 @@
 	</table>
 	<br>
 	<hr>
-	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
+	<table align=center width=800px>
+		<center><h1>Paper</h1></center>
 		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
-				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
-				<span style="font-size:4pt"><a href=""><br></a>
-				</span>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.jpg"/></a></td>
+			<td><span style="font-size:14pt">Chakraborty K., Bansal S.<br>
+				<br>
+				<b>Discovering Closed-Loop Failures of Vision-Based Controllers via	Reachability Analysis.</b>
+				<br>
 			</td>
 		</tr>
 	</table>
@@ -280,8 +253,11 @@
 	<table align=center width=600px>
 		<tr>
 			<td><span style="font-size:14pt"><center>
-				<a href="./resources/bibtex.txt">[Bibtex]</a>
+				<a href="https://arxiv.org/pdf/2211.02736.pdf">[PDF]</a>
 			</center></td>
+			<td><span style="font-size:14pt"><right>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			</right></td>
 		</tr>
 	</table>
 
@@ -293,7 +269,7 @@
 			<td width=400px>
 				<left>
 					<center><h1>Acknowledgements</h1></center>
-					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+					This webpage template was borrowed from some <a href="https://richzhang.github.io/colorization/">colorful folks</a>.
 				</left>
 			</td>
 		</tr>
